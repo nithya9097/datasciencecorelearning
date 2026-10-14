@@ -4,9 +4,9 @@ out/
 dist/
 coverage/
 .vercel/
-.env*
-!.env.example
-!.env.local
+.env
+.env.example
+.env.local
 *.log
 .DS_Store
 Thumbs.db
