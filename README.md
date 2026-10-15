@@ -73,6 +73,29 @@ npm run build     # production build
 npm start         # run production build
 ```
 
+# DataSciencePath project expansion bundle
+
+Contents:
+- `lib/projects.ts`: six project definitions compatible with the existing project detail page.
+- `public/datasets/`: synthetic CSV practice datasets for the five new projects.
+
+## Install
+1. Back up your existing `lib/projects.ts`.
+2. Replace it with `lib/projects.ts` from this bundle.
+3. Copy the CSV files into your project's `public/datasets/` folder.
+4. Ensure the homepage project-card IDs match:
+   - `sales-forecasting-bi`
+   - `customer-churn-prediction`
+   - `retail-customer-segmentation`
+   - `end-to-end-data-pipeline`
+   - `resume-screening-assistant`
+   - `time-series-forecasting`
+5. Keep your existing `public/datasets/customer_churn.csv`; this bundle does not include or replace it.
+6. Run `npx tsc --noEmit`, then test each `/projects/<id>` route.
+
+The newly supplied datasets are synthetic learning data. In particular, the resume screening dataset is not suitable for real hiring decisions.
+
+
 ## Current scope
 
 This is a professional starter learning platform, not a fully administered commercial LMS. Next milestones could include lesson quizzes with server-side answer validation, saved quiz attempts, user profiles, admin content management, richer search, automated tests, and deployment to Vercel.

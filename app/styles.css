@@ -43,3 +43,70 @@
 .lessonLink{display:flex;align-items:center;justify-content:space-between;text-decoration:none;margin-bottom:8px}
 @media(max-width:850px){.lessonLayout{grid-template-columns:1fr;gap:28px;padding:24px 5% 56px}.lessonSidebar{position:static;max-height:none}.lessonTopicList{grid-template-columns:repeat(2,minmax(0,1fr))}.lessonCompletion{grid-template-columns:1fr}.lessonCompletion .button{width:100%}}
 @media(max-width:520px){.lessonNav{padding:0 5%;height:64px}.backLink{font-size:11px}.lessonTopicList{grid-template-columns:1fr}.lessonArticle h1{font-size:34px}.lessonLead{font-size:15px}.codePanel,.outputPanel{font-size:11px;padding:14px}.lessonPagination{flex-direction:column}.paginationLink{max-width:100%}}
+
+/* DataSciencePath Tutor floating assistant */
+.dspChatRoot{position:fixed;right:24px;bottom:22px;z-index:1000;font-family:inherit;color:#eef2ff}
+.dspChatLauncher{display:flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 19px;border:1px solid rgba(174,157,255,.5);border-radius:999px;background:linear-gradient(135deg,#7665ee,#4b58c8);color:#fff;font-size:14px;font-weight:700;box-shadow:0 12px 38px rgba(0,0,0,.35);cursor:pointer}
+.dspChatLauncher:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.dspChatLauncherIcon{font-size:20px}
+.dspChatPanel{width:min(390px,calc(100vw - 28px));height:min(590px,calc(100dvh - 105px));display:flex;flex-direction:column;overflow:hidden;margin-bottom:12px;border:1px solid #303b5d;border-radius:18px;background:#0e1628;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.dspChatHeader{display:flex;align-items:center;gap:11px;padding:15px 16px;background:#141e34;border-bottom:1px solid #2a3552}
+.dspChatAvatar{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:linear-gradient(135deg,#8b7aff,#4d9af7);font-size:12px;font-weight:800;color:#fff}
+.dspChatHeaderText{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.dspChatHeaderText strong{font-size:13px}
+.dspChatHeaderText span{font-size:11px;color:#9eaccb}
+.dspChatIconButton{border:0;background:transparent;color:#cbd5ef;font-size:27px;line-height:1;cursor:pointer}
+.dspChatMessages{flex:1;overflow-y:auto;padding:15px 12px;display:flex;flex-direction:column;gap:12px}
+.dspChatMessage{display:flex;width:100%}
+.dspChatMessage.user{justify-content:flex-end}
+.dspChatBubble{max-width:90%;padding:10px 12px;border:1px solid #293654;border-radius:13px;background:#151f34;color:#e5eaf8;font-size:13px;line-height:1.55;overflow-wrap:anywhere}
+.dspChatMessage.user .dspChatBubble{background:#5149a5;border-color:#6d62cf;color:white;border-bottom-right-radius:4px}
+.dspChatMessage.assistant .dspChatBubble{border-bottom-left-radius:4px}
+.dspChatCode{max-width:100%;overflow:auto;margin:8px 0 2px;padding:10px;border-radius:8px;background:#080e1b;border:1px solid #293654;font-size:11px;white-space:pre}
+.dspChatTyping{color:#b9c4e1;font-style:italic}
+.dspChatStarters{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 12px}
+.dspChatStarters button{border:1px solid #414d71;border-radius:999px;padding:7px 9px;background:#151f34;color:#cfd8f4;font-size:11px;cursor:pointer}
+.dspChatStarters button:hover{border-color:#9b8cff}
+.dspChatError{margin:0;padding:8px 12px;color:#ffb8bf;font-size:12px}
+.dspChatForm{display:flex;align-items:flex-end;gap:8px;padding:12px;border-top:1px solid #293654;background:#111a2c}
+.dspChatForm textarea{flex:1;min-width:0;resize:none;border:1px solid #34415f;border-radius:10px;padding:10px;background:#0b1221;color:#f3f5ff;font:inherit;font-size:12px;line-height:1.45;outline:none}
+.dspChatForm textarea:focus{border-color:#9182ff}
+.dspChatForm button{height:38px;padding:0 13px;border:0;border-radius:9px;background:#7467e9;color:white;font-size:12px;font-weight:700;cursor:pointer}
+.dspChatForm button:disabled{opacity:.5;cursor:not-allowed}
+.dspChatDisclaimer{margin:0;padding:0 12px 10px;background:#111a2c;color:#8795b5;font-size:10px}
+@media(max-width:520px){.dspChatRoot{right:12px;bottom:12px}.dspChatPanel{width:calc(100vw - 24px);height:min(72dvh,600px)}.dspChatLauncher{min-height:48px;padding:0 15px}}
+
+/* Progress + Interview pages */
+.pageShell{min-height:100vh;background:#0b1020;color:#eef2ff}
+.pageMain{max-width:900px;margin:0 auto;padding:40px 24px 80px}
+.pageMain h1{font:700 clamp(30px,4vw,42px) 'Space Grotesk';letter-spacing:-1.2px;margin:8px 0 6px}
+.statGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0 18px}
+.statBox{border:1px solid var(--line);background:#10192b;border-radius:12px;padding:16px;text-align:center}
+.statBox strong{display:block;font:700 24px 'Space Grotesk'}
+.statBox span{font-size:11px;color:var(--muted)}
+.continueCard{display:grid;gap:6px;margin:22px 0 10px;padding:18px;border:1px solid #494078;background:#292448;border-radius:12px}
+.continueCard small{font-size:10px;letter-spacing:1.2px;color:#b5a8ff}
+.continueCard:hover{border-color:#8173d7}
+.pgStage{margin-top:34px}
+.pgStage h2{font:700 20px 'Space Grotesk';margin:0 0 12px}
+.pgModule{border:1px solid #27334b;background:#10192b;border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.pgModule summary{cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:0 10px;font-size:14px;font-weight:600}
+.pgModule summary b{font-size:12px;color:#a99aff}
+.pgModule summary .progressTrack{grid-column:1/-1;margin:10px 0 0}
+.pgModule ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:4px}
+.pgModule li a{display:block;padding:7px 9px;border-radius:8px;font-size:13px;color:#bdc8dd}
+.pgModule li a:hover{background:#1a2540;color:#fff}
+.ivFilters{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.ivFilters input,.ivFilters select{background:#121d33;color:white;border:1px solid var(--line);border-radius:10px;padding:11px 12px;outline:none}
+.ivFilters input{flex:1;min-width:200px}
+.ivCard{border:1px solid #27334b;background:#10192b;border-radius:14px;padding:18px;margin-bottom:12px}
+.ivTop{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.ivTop h3{font:600 16px/1.5 'DM Sans';margin:10px 0 0}
+.ivBadge{font-size:10px;font-weight:700;padding:4px 9px;border-radius:20px;border:1px solid}
+.ivBadge.easy{color:#75e3c3;border-color:#286c5c}
+.ivBadge.medium{color:#ffd482;border-color:#7a5f2c}
+.ivBadge.hard{color:#ff9aa6;border-color:#7b3340}
+.ivCat{font-size:11px;color:var(--muted);margin-left:10px}
+.ivDone{display:flex;gap:6px;align-items:center;font-size:12px;color:#c8d2e6;white-space:nowrap}
+.ivAnswer{margin:8px 0 0;padding:14px;border-radius:10px;background:#111a2b;border:1px solid #2a3650;color:#c5cee1;font-size:13px;line-height:1.8}
+@media(max-width:600px){.statGrid{grid-template-columns:1fr 1fr}.ivTop{flex-direction:column}}
